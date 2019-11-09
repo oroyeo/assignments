@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title> Lab 8 </title>
+  </head>
+
+  <body>
+    <script>
+
+      function generateButtons(num) {
+        if (num > 26) {
+          return
+        }
+
+        let start = 65;
+        for (let i = 0; i < num; ++i) {
+          let letter = String.fromCharCode(start + i);
+          let btni = document.createElement("BUTTON");
+          document.body.appendChild(btni);
+          btni.innerHTML = letter;
+          btni.onclick = function () {
+            console.log("Button " + letter + " was clicked");
+        }
+      }
+    }
+      input = prompt("Please enter a number");
+      number = parseInt(input);
+      generateButtons(number);
+      document.write('<br><br>')
+    </script>
+
+    <script>
+      function Myrecipe (title, servings, ingredients) {
+        this.title = title;
+        this.servings = servings;
+        this.ingredients = ingredients;
+        this.print = function () {
+          document.write("<b>Title: " + title + "<br><br></b>");
+          document.write("<b>Serves: " + servings + "<br><br></b>");
+          document.write("<b>Ingredients:<br><br></b>");
+          for (let i = 0; i < ingredients.length; ++ i)
+            document.write("<b>" + ingredients[i] + "</b><br><br>")
+        }
+      }
+
+      let myObj = new Myrecipe("Chicken Cacciatore", 2, ["cinnamon", "lettuce", "onion"]);
+      myObj.print()
+
+    </script>
+  </body>
+
+</html>
