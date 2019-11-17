@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <p id='buttontext'>How many buttons do you want to create?</p>
+    <p id='buttontext'><b>How many buttons do you want to create?</b></p>
     <input type='text' id='amount' value=''>
     <button id='go'>Go!</button>
 
@@ -64,7 +64,7 @@
                 let leftpos = random[1]
                 document.getElementById('created' + i).style.top = toppos;
                 document.getElementById('created' + i).style.left = leftpos;
-                }, 2000)
+                }, moveinterval)
             } 
 
         }
